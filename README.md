@@ -1,4 +1,4 @@
-# project1
+# portfolio_landing
 
 ## Project setup
 ```
