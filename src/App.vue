@@ -22,6 +22,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  // reset styles
+  @import url('./../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss');
+  @import url('./../node_modules/css-reset-and-normalize/scss/button-reset.scss');
+  @import url('./../node_modules/css-reset-and-normalize/scss/link-reset.scss');
+
   // Gilroy-Medium font
   @font-face {
     font-family: 'Gilroy-Medium';

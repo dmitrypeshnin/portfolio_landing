@@ -23,11 +23,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  // style reset
-  @import '../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss';
-  @import '../../node_modules/css-reset-and-normalize/scss/link-reset.scss';
-  @import '../../node_modules/css-reset-and-normalize/scss/button-reset.scss';
-  
   .container {
     max-width: 945px;
   }
