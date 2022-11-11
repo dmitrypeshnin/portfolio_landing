@@ -5,8 +5,8 @@
         <div class="presentationBlock__name">Denis Novik</div>
         <div class="presentationBlock__title">UX | UI designer 24 years old, Minsk</div>
         <div class="presentationBlock__lang lang-switcher">
-          <a class="lang-switcher__eng lang-switcher__eng-active">ENG</a>
-          <a class="lang-switcher__ru">RU</a>
+          <a href="#" class="lang-switcher__eng lang-switcher__eng-active">ENG</a>
+          <a href="#" class="lang-switcher__ru">RU</a>
           
           
           
@@ -70,14 +70,12 @@ export default {
     border-top: 1px solid #000000;
     padding-top: 6px;
     writing-mode: vertical-lr;
-    cursor: pointer;
   }
 
   &__ru {
     border-bottom: 1px solid #000000;
     padding-bottom: 6px;
     writing-mode: vertical-lr;
-    cursor: pointer;
   }
 
   &__eng-active {
