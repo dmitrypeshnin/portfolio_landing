@@ -14,9 +14,9 @@ import AboutMeBlock from "@/components/AboutMeBlock";
 export default {
   name: 'App',
   components: {
+    Header,
     AboutMeBlock,
     PresentationBlock,
-    Header,
   }
 }
 </script>

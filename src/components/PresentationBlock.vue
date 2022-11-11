@@ -30,15 +30,17 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  width: 945px;
+  max-width: 945px;
   margin: 0 auto;
 }
 
 .presentationBlock {
+  padding-bottom: 104px;
+
   &__top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 40px 0 54px 0;
   }
 
