@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="container">
+    <div class="header__inner">
       <nav class="header__menu menu">
         <ul class="menu__list">
           <li class="menu__item">
@@ -21,7 +21,6 @@
         </ul>
     </nav>
     </div>
-    
   </header>
 </template>
 
@@ -33,11 +32,11 @@ export default {
 
 
 <style lang="scss" scoped>
-.container {
-  max-width: 945px;
-  margin: 0 auto;
-}
 .header {
+  &__inner {
+    max-width: 945px;
+    margin: 0 auto;
+  }
   &__menu {
     height: 88px;
     border-bottom: 1px solid #828282;
@@ -50,14 +49,12 @@ export default {
     display: flex;
     justify-content: space-between;
   }
-
   &__link {
     font-family: 'Gilroy-Bold';
     font-size: 18px;
     line-height: 22px;
     color: #828282;
   }
-
   &__link-active {
     color: #070707;
   }
