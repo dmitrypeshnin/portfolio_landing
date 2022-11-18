@@ -3,6 +3,9 @@
     <Header />
     <PresentationBlock />
     <AboutMeBlock />
+    <SkillsBlock />
+    <PortfolioBlock />
+    <ContactsBlock />
   </div>
 </template>
 
@@ -10,6 +13,9 @@
 import Header from "@/components/Header";
 import PresentationBlock from "@/components/PresentationBlock";
 import AboutMeBlock from "@/components/AboutMeBlock";
+import SkillsBlock from "@/components/SkillsBlock";
+import PortfolioBlock from "@/components/PortfolioBlock.vue";
+import ContactsBlock from "@/components/ContactsBlock.vue";
 
 export default {
   name: 'App',
@@ -17,6 +23,9 @@ export default {
     Header,
     AboutMeBlock,
     PresentationBlock,
+    SkillsBlock,
+    PortfolioBlock,
+    ContactsBlock,
   }
 }
 </script>
