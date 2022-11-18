@@ -65,7 +65,6 @@ export default {
 <style lang="scss" scoped>
   .skillsBlock {
     &__inner {
-      max-width: 935px;
       height: 610px;
       padding-top: 91px;
       margin: 0 auto;
@@ -90,14 +89,16 @@ export default {
 
   .program-levels {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     &__item {
-      width: 166px;
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      margin-left: 160px;
+      &:first-child {
+        margin-left: 0;
+      }
     }
     &__app-icon {
       height: 90px;
