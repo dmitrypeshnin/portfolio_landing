@@ -4,48 +4,20 @@
         <h2 class="skillsBlock__title">Skills</h2>
         <p class="skillsBlock__text">I work in such programs as</p>
         <div class="skillsBlock__program-levels program-levels">
-          <div class="program-levels__item">
-            <img class="program-levels__app-icon" src="../assets/img/photoshop-icon.png" alt="photoshop-icon">
-            <h3 class="program-levels__app-title">Adobe<br>Photoshop</h3>
-            <div class="program-levels__stars stars">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/light-star.png" alt="light-star">
+          <div
+            v-for="item of skills"
+            :key="item.title"
+            class="program-levels__item"
+          >
+            <img class="program-levels__app-icon" :src="item.img" :alt="item.title">
+            <p class="program-levels__app-title">{{ item.title }}</p>
+            <div class="program-levels__stars">
+            <div
+              v-for="stars in 5"
+              :key="stars.title"
+            >
+              <img class="program-levels__star" :src="item.imgStar" :alt="item.title">
             </div>
-          </div>
-          <div class="program-levels__item">
-            <img class="program-levels__app-icon" src="../assets/img/illustrator-icon.png" alt="illustrator-icon">
-            <h3 class="program-levels__app-title">Adobe<br>Illustrator</h3>
-            <div class="program-levels__stars stars">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/light-star.png" alt="light-star">
-              <img class="stars__star-item" src="../assets/img/light-star.png" alt="light-star">
-            </div>
-          </div>
-          <div class="program-levels__item">
-            <img class="program-levels__app-icon" src="../assets/img/after-effects-icon.png" alt="after-effects-icon">
-            <h3 class="program-levels__app-title">Adobe<br>After Effects</h3>
-            <div class="program-levels__stars stars">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/light-star.png" alt="light-star">
-            </div>
-          </div>
-          <div class="program-levels__item">
-            <img class="program-levels__app-icon" src="../assets/img/figma-icon.png" alt="figma-icon">
-            <h3 class="program-levels__app-title">Figma</h3>
-            <div class="program-levels__stars stars">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/dark-star.png" alt="dark-star">
-              <img class="stars__star-item" src="../assets/img/light-star.png" alt="light-star">
             </div>
           </div>
         </div>
@@ -55,7 +27,38 @@
 
 <script>
 export default {
-  name: "SkillsBlock"
+  name: "SkillsBlock",
+  data () {
+    return {
+      skills: [
+        {
+          id: 1,
+          img: require('@/assets/img/photoshop-icon.png'),
+          title: 'Adobe Photoshop',
+          imgStar: require('@/assets/img/dark-star.png')
+        },
+        {
+          id: 2,
+          img: require('@/assets/img/illustrator-icon.png'),
+          title: 'Adobe Illustrator',
+          imgStar: require('@/assets/img/dark-star.png')
+        },
+        {
+          id: 3,
+          img: require('@/assets/img/after-effects-icon.png'),
+          title: 'Adobe After Effects',
+          imgStar: require('@/assets/img/dark-star.png')
+        },
+        {
+          id: 4,
+          img: require('@/assets/img/figma-icon.png'),
+          title: 'Figma',
+          imgStar: require('@/assets/img/dark-star.png')
+        },
+      ]
+
+    }
+  },
 };
 </script>
 
@@ -88,7 +91,7 @@ export default {
   .program-levels {
     display: flex;
     justify-content: space-between;
-    
+
     &__item {
       width: 166px;
       display: flex;
@@ -102,12 +105,16 @@ export default {
     }
     &__app-title {
       height: 27px;
+      width: min-content;
       margin-bottom: 40px;
       text-align: center;
       font-family: 'Gilroy-Bold';
       font-size: 14px;
       line-height: 17px;
       color: #828282;
+    }
+    &__stars {
+      display: flex;
     }
   }
 
