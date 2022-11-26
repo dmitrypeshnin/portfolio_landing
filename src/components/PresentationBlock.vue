@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="presentationBlock__bottom">
-        <img src="../assets/img/photo.png" alt="photo">
+        <img src="@/assets/img/photo.png" alt="photo">
       </div>
     </div>
   </div>

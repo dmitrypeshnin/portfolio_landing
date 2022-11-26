@@ -3,20 +3,8 @@
     <div class="header__inner">
       <nav class="header__menu menu">
         <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__link menu__link-active">Home</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">About me</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Skills</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Portfolio</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Contacts</a>
+          <li class="menu__item" v-for="item in menuList" :key="item.text">
+            <a class="menu__link" :href="item.linkPath">{{ item.text }}</a>
           </li>
         </ul>
     </nav>
@@ -26,7 +14,32 @@
 
 <script>
 export default {
-  name: "HeaderBlock"
+  name: "HeaderBlock",
+  data() {
+    return {
+      menuList: [
+        {
+          text: "Home",
+          linkPath: "#",
+        },
+        {
+          text: "About me",
+          linkPath: "#"
+        },{
+          text: "Skills",
+          linkPath: "#"
+        },
+        {
+          text: "Portfolio",
+          linkPath: "#"
+        },
+        {
+          text: "Contacts",
+          linkPath: "#"
+        }
+      ]
+    }
+  }
 };
 </script>
 

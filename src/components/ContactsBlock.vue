@@ -4,24 +4,9 @@
         <p class="contactsBlock__subtitle">Want to know more or just chat? You are welcome!</p>
         <div class="contactsBlock__button">Send message</div>
         <ul class="contactsBlock__social">
-            <li class="contactsBlock__social-icon">
-                <a class="contactsBlock_social-link" href="#">
-                    <img class="contactsBlock__social-icon" src="../assets/img/linkedin-icon.svg" alt="LinkedIn">
-                </a>
-            </li>
-            <li class="contactsBlock__social-icon">
-                <a class="contactsBlock_social-link" href="#">
-                    <img class="contactsBlock__social-icon" src="../assets/img/instagram-icon.svg" alt="Instagram">
-                </a>
-            </li>
-            <li class="contactsBlock__social-icon">
-                <a class="contactsBlock_social-link" href="#">
-                    <img class="contactsBlock__social-icon" src="../assets/img/behance.svg" alt="Behance">
-                </a>
-            </li>
-            <li class="contactsBlock__social-icon">
-                <a class="contactsBlock_social-link" href="#">
-                    <img class="contactsBlock__social-icon" src="../assets/img/dribble.svg" alt="Behance">
+            <li class="contactsBlock__social-icon" v-for="icon in socialIcons" :key="icon.title">
+                <a class="contactsBlock_social-link" :href="icon.linkPath">
+                    <img class="contactsBlock__social-icon" :src="icon.img" :alt="icon.title" >
                 </a>
             </li>
         </ul>
@@ -34,8 +19,34 @@
 
 <script>
 export default {
-  name: "ContactsBlock"
-};
+  name: "ContactsBlock",
+  data() {
+    return {
+        socialIcons: [
+            {
+                title: "linkedin-icon",
+                img: require('@/assets/img/linkedin-icon.svg'),
+                linkPath: "https://linkedin.com/"
+            },
+            {
+                title: "instagram-icon",
+                img: require('@/assets/img/instagram-icon.svg'),
+                linkPath: "https://instagram.com/"
+            },
+            {
+                title: "behance-icon",
+                img: require('@/assets/img/behance.svg'),
+                linkPath: "https://www.behance.net/"
+            },
+            {
+                title: "dribble-icon",
+                img: require('@/assets/img/dribble.svg'),
+                linkPath: "https://dribbble.com/"
+            },
+        ]
+    };
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -106,5 +117,4 @@ export default {
             color: #828282;
         }
     }
-
 </style>
